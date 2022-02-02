@@ -1,0 +1,22 @@
+{
+  "name": "testbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@slack/bolt": "^3.9.0",
+    "ngrok": "^4.3.0"
+  },
+  "devDependencies": {
+    "add": "^2.0.6",
+    "dotenv": "^15.0.0",
+    "nodemon": "^2.0.15"
+  }
+}

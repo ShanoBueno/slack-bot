@@ -1,0 +1,474 @@
+{
+"modules": [
+{
+"children": [
+{
+"type": "information",
+"prompt": "It's important to be able to connect your work to your team's work. Your first week here can set the stage for the rest of your career here. I want to make sure you start on the right foot.",
+"name": "Welcome"
+},
+{
+"type": "information",
+"prompt": "Here are some commands that will help you in your onboarding.",
+"name": "Commands"
+},
+{
+"type": "information",
+"prompt": "**checkin**: Manually trigger the check-in flow, in which I ask you if you've completed the tasks due for the day.",
+"name": "checkin"
+},
+{
+"type": "information",
+"prompt": "**onboard**: Move on to the next section once all your tasks are complete.",
+"name": "onboard"
+},
+{
+"type": "information",
+"prompt": "**list**: to display a list of open tasks.",
+"name": "list"
+},
+{
+"type": "information",
+"prompt": "You can type **help** at any time to get a list of commands that I understand.",
+"name": "help"
+},
+{
+"name": "Get started",
+"prompt": "Type checkin now, to start the checkin flow and complete your first task.",
+"type": "task",
+"task": "Start the checkin flow",
+"check_prompt": "Are you ready to start onboarding?"
+}
+],
+"type": "module",
+"description": "Hi there! 👋 Let's get started with your Onboarding.",
+"name": "Onboarding Intro"
+},
+{
+"children": [
+{
+"name": "Schedule 1:1 with Buddy",
+"prompt": "It's not just me helping you ramp up here - there's a whole team, including a Buddy, who will help you with any questions you don't feel like you can go to your Manager with. Your Buddy is @buddy. You should schedule a 1:1 with them today or tomorrow.",
+"type": "task",
+"task": "Schedule a 1:1 with your Buddy, @buddy",
+"check_prompt": "Did you schedule a 1:1 with your Buddy?"
+},
+{
+"type": "information",
+"prompt": "It's important to be able to connect your work to your team's work. The best way to do that is to ask your Manager how they see your work impacting the success of the team. Your Manager sees your contribution to the team like this: @NewHireRole.",
+"name": "Role Introduction"
+},
+{
+"name": "Schedule 1:1 with Manager",
+"prompt": " It's important to be able to connect your work to your team's work. Long-term success in this role looks like: @NewHireExpectations. If you don't already have one set up, you should schedule a 1:1 with your manager to discuss how you contribute to the team's success. Make sure you schedule that today.",
+"type": "task",
+"task": "Schedule a 1:1 with your manager, @manager",
+"check_prompt": "Do you have a 1:1 set up with your manager (even if it hasn't happened yet)?"
+},
+{
+"type": "information",
+"prompt": "It will help you to know what a typical day looks like for someone in your role. Ask your Buddy how much time they spend coding, reading, writing docs, and taking meetings.",
+"name": "Typical Day"
+}
+],
+"type": "module",
+"description": "First, I want to help set your expectations for working here. This information came from your teammates and Manager, and I hope it helps you figure out what is expected of you here.",
+"name": "Expectations"
+},
+{
+"children": [
+{
+"name": "Confirm access to communication tools",
+"prompt": "Now you should find out about the tools we use to get work done. Ask your manager if you have access to all these tools.",
+"type": "task",
+"task": "Confirm access to communication tools",
+"check_prompt": "Do you now have access to all the tools and channels you need to communicate with your teammates?"
+},
+{
+"name": "Join important Slack channels",
+"prompt": "I know there's a lot of information to digest when you're just getting started. Ask your buddy about the most important Slack channels for you to pay attention to.",
+"type": "task",
+"task": "Join slack channels important to your role",
+"check_prompt": "Did you get access to all of the Slack channels today that are important for you to pay attention to?"
+}
+],
+"type": "module",
+"description": "Being new can be discombobulating. These resources will help!",
+"name": "Communications"
+},
+{
+"children": [
+{
+"type": "information",
+"prompt": "You should ask your Manager about the best ways to get help with different topics - for example, team subject experts and leadership, what to do with HR questions, and how to use the tools and documentation available. It's OK if you get stuck during onboarding. There are people here to help! Your Manager says the best way to get help while you are onboarding is: @NewHireHelp",
+"name": "Getting Help"
+},
+{
+"name": "Meet Team",
+"prompt": " I want to make sure you're connected to your closest team members. You should reach out to your immediate team today to schedule 1:1s. Your manager suggested you get to know the following folks: @NewHireTeamMembers",
+"type": "task",
+"task": "Schedule 1:1s with teammates",
+"check_prompt": "Have you scheduled 1:1s with your teammates?"
+}
+],
+"type": "module",
+"description": "You'll need to know where to go and who to ask when you need help. Apart from me, obviously. I got you. 👯",
+"name": "Team"
+},
+{
+"children": [
+{
+"type": "information",
+"prompt": "You need to understand how our team prioritizes work in order to know what the most important contribution is that you can make right now, and so you can offer input on the priority of future work. Ask your Buddy or product manager how work is organized and prioritized in your team.",
+"name": "Understanding Priorities"
+},
+{
+"type": "information",
+"prompt": "Every team has its own shorthand of acronyms and shortened words. Check with your Buddy if there's a glossary or if some key words you should know.",
+"name": "Learning Acronyms"
+},
+{
+"name": "Setup Dev Environment",
+"prompt": "Your next task is to set up your dev environment. First, try to find a dev environment set up checklist or guide in your team's knowledge repo, then check in with your Buddy if you can't find it.",
+"type": "task",
+"task": "Set up dev environment",
+"check_prompt": "Did you get your dev environment set up today?"
+}
+],
+"type": "module",
+"description": "I'm here to help you feel confident and make a good impression in your new role. This section is about how you show up here.",
+"name": "Expectations 2"
+},
+{
+"children": [
+{
+"type": "information",
+"prompt": "Your manager has hand-picked this project for your first commit: {New_Hire.Orientation_L1.OnboardingInfoFirstCommit}. {New_Hire.Orientation_L1.FirstCommitDetail}",
+"name": "First Commit"
+},
+{
+"name": "Review Code Repository",
+"prompt": "Your next task is to spend some time reviewing the code repo. Jot down some notes as you review so you can ask questions during your 1:1s. If you're not sure where to start, ask your Buddy.",
+"type": "task",
+"task": "Review code repository",
+"check_prompt": "Did you get a chance to review the code repo today?"
+},
+{
+"name": "Team Responsibilities",
+"prompt": "It's important that you understand the scope of our team's responsibilities. One of your goals today is to make sure you understand the responsibilities of our team.",
+"type": "task",
+"task": "Investigate your team's responsibilities",
+"check_prompt": "Do you have a handle on what systems and platforms your team is responsible for?"
+},
+{
+"type": "information",
+"prompt": "Ok, now we're going to learn about the software development lifecycle our team is responsible for. Ask your buddy to describe how your work will go through this cycle.",
+"name": "Software Development Lifecycle"
+},
+{
+"name": "Review Documentation",
+"prompt": "Know how to find where our team keeps documentation. After you get access, get a sense for how the knowledge is structured, look over the table of contents or content index and start to familiarize yourself with the different topic areas.\n",
+"type": "task",
+"task": "Review Documentation",
+"check_prompt": "Did you get a chance to start reviewing our team's documentation at a high level today?"
+}
+],
+"type": "module",
+"description": "Let's get to work! 💪 You should try to make your first commit in about your first week. Don't worry - I'll help you through the whole process. Here are a few tasks to get you started.",
+"name": "Orientation"
+},
+{
+"children": [
+{
+"type": "information",
+"prompt": "If you haven't yet found where we store source code, ask your Buddy. While you're at it, ask them how code reviews work here and how to make a pull request.",
+"name": "Source Code Storage"
+},
+{
+"name": "Create a Pull Request",
+"prompt": "Your next task is to create your first pull request.",
+"type": "task",
+"task": "Create your first pull request",
+"check_prompt": "Did you get a chance to create your first pull request today?"
+},
+{
+"type": "information",
+"prompt": "You need to know about our CI/CD pipeline. Ask your Manager to describe it for you.",
+"name": "CI/CD Pipeline"
+},
+{
+"type": "information",
+"prompt": "OK, next let's review the libraries and frameworks you'll use in your work. Ask your Buddy what frameworks and libraries we use the most. If you're not familiar with some of them, set aside time to do some research!",
+"name": "Libraries"
+},
+{
+"type": "information",
+"prompt": "Methodology is about more than workflows, it's about how we work as a team. Ask your Buddy if we use agile, scrum, or another style.",
+"name": "Work Methodology"
+},
+{
+"type": "information",
+"prompt": "Let's learn about our best practices for Git branching and merging. Ask a colleague to walk you through.",
+"name": "Git Best Practices"
+}
+],
+"type": "module",
+"description": "Let's get you set up to make a pull request and your first commit!",
+"name": "Process"
+},
+{
+"children": [
+{
+"name": "Understanding the Product",
+"prompt": "OK, on to what problems the product solves. Spend some time today learning about how our product addresses specific customer challenges. You might find case studies on the company website, or you might try talking with your Product Manager!",
+"type": "task",
+"task": "Figure out what problems your product solves",
+"check_prompt": "Did you figure out how your product makes its customers' lives better?"
+},
+{
+"type": "information",
+"prompt": "It's important to know who the customer is for our products. See if you can find some customer persona information or ask a teammate.\n",
+"name": "Understanding the Customer"
+},
+{
+"type": "information",
+"prompt": "The Product Management team is responsible for aligning deliverables to parts of the company. See if you can find some documentation or ask around to figure out how the PM team's goals impact your work.",
+"name": "Product Management Team"
+},
+{
+"type": "information",
+"prompt": "The product roadmap is a guide to the short and long term goals for our product. It helps us prioritize our work. Ask your Manager or a member of the PM team what you should know about how the roadmap impacts your work.",
+"name": "Product Roadmap"
+}
+],
+"type": "module",
+"description": "We strive to make amazing, helpful things. Today, let's learn about our product and what it does.",
+"name": "Product Overview"
+},
+{
+"children": [
+{
+"type": "information",
+"prompt": "It's important for you to know all the ways customers can access our product. See if you can find information on how we deliver our product or if someone can tell you about delivery.",
+"name": "Product Platform"
+},
+{
+"type": "information",
+"prompt": "You should learn about our product's primary functions. Reach out to your Product Manager to ask about the product's key functions and behaviors, and how your work will contribute to them.",
+"name": "Product Function"
+},
+{
+"name": "Explore the Frontend",
+"prompt": "Today you should explore the front end of our product. See if there are ways you can try \"user testing\" it or getting into the product just the way a customer would.",
+"type": "task",
+"task": "Explore the front end of our product",
+"check_prompt": "Did you figure out today what the front end is built on?"
+},
+{
+"name": "Explore the Backend",
+"prompt": "Let's talk about the back end of our product. Ask a team member you haven't spent much time with yet to walk you through it - you might even try diagramming it!",
+"type": "task",
+"task": "Explore the back end of our product",
+"check_prompt": "Did you get the chance to investigate how the back end is built?"
+}
+],
+"type": "module",
+"description": "Let's learn about how our product is actually made!",
+"name": "Product Detail"
+},
+{
+"children": [
+{
+"name": "Coding Conventions",
+"prompt": "Every company has conventions for how they like to code. We're no different! Ask your Buddy about coding conventions, best practices, and commenting norms.",
+"type": "task",
+"task": "Explore coding conventions and best practices",
+"check_prompt": "Did you explore our coding conventions today?"
+},
+{
+"type": "information",
+"prompt": "Now, let's get familiar with the security protocols that we follow for development. Reach out to your Buddy to ask what security protocols you should know about.",
+"name": "Security Protocols"
+},
+{
+"type": "information",
+"prompt": "See if you have access to some linting tools, or ask someone if there are processes you should follow to ensure your code is solid.",
+"name": "Linting Tools"
+},
+{
+"type": "information",
+"prompt": "Good versioning keeps us on track. Ask your Buddy today how versioning is done in your team.",
+"name": "Versioning"
+}
+],
+"type": "module",
+"description": "At a high level, this section is about how we code in this team.",
+"name": "Code Orientation"
+},
+{
+"children": [
+{
+"type": "information",
+"prompt": "Today you should learn what success looks like for shipping and releasing products and features. Ask someone in your Product Management team to describe how success is measured for shipping.",
+"name": "Measuring Success"
+},
+{
+"type": "information",
+"prompt": "Understanding what 'done' looks like ensures that we deliver a quality product and helps us avoid rework. Ask your Buddy or another teammate how you know when a ticket or other task is done.",
+"name": "Defining Completion"
+},
+{
+"type": "information",
+"prompt": "You can avoid extra work and delivery delays by making sure you thoroughly understand the requirements of a given task. Do a search for acceptance criteria in the knowledge repo or ask someone how tasks are defined.",
+"name": "Understanding Requirements"
+},
+{
+"name": "Meet with QA Team Member",
+"prompt": "QA makes sure our customers get a great experience, no matter how they use our product. Schedule a 1:1 with a QA team member today to discuss the QA process.",
+"type": "task",
+"task": "Schedule a meeting with a member of the QA team",
+"check_prompt": "Did you schedule a meeting with someone from the QA team?"
+},
+{
+"type": "information",
+"prompt": "Today you should find out about the kinds of metrics your team prioritizes. Use keywords like measure, metrics, and KPI to find documentation, or ask a teammate what metrics are important.",
+"name": "Important Metrics"
+}
+],
+"type": "module",
+"description": "I don't know about you but I think shipping days are just about my favorite days! 🎉 Here's how we do QA, acceptance, and what success looks like for shipping.",
+"name": "Product Shipping"
+},
+{
+"children": [
+{
+"type": "information",
+"prompt": "Our team relies on other teams in order to get work done. You can probably see examples of how other teams support your work. If not, ask someone in your team for some examples.",
+"name": "Internal Support"
+},
+{
+"type": "information",
+"prompt": "Ask someone on your team about how your work supports others in the organization and who relies on your team for what.",
+"name": "External Support"
+},
+{
+"type": "information",
+"prompt": "Knowing how tickets are handled will give you a head start on your onboarding. If you haven't already figured out the ticketing system, Slack your Buddy to find out.",
+"name": "Ticket System"
+},
+{
+"name": "Ticket Practice",
+"prompt": "t's important you understand the process for submitting a ticket. Now, create your own practice ticket and submit it.",
+"type": "task",
+"task": "Create a practice ticket",
+"check_prompt": "Did you practice creating and submitting a ticket today?"
+},
+{
+"name": "Tackle a bug ticket",
+"prompt": "Have you tackled a bug yet? We have some best practices. Now, go get a low-level bug to work on today. Approach a team member you haven't spoken to much and ask if there is documentation or process for bug best practices.",
+"type": "task",
+"task": "Squash your first bug",
+"check_prompt": "Did you squash a bug today?"
+}
+],
+"type": "module",
+"description": "This is how ticketing and supporting other teams works here. ",
+"name": "Tickets and Support"
+},
+{
+"children": [
+{
+"name": "Managing Containers",
+"prompt": "Reach out to your Buddy to ask how we use containers to create, deploy, and run applications as well as which container tools we use.\n",
+"type": "task",
+"task": "Look into tools that manage containers",
+"check_prompt": "Have you figured out how manage containers here?"
+},
+{
+"type": "information",
+"prompt": "Ask someone on your team which configuration tools you should use in your work.\n",
+"name": "Container Configuration"
+}
+],
+"type": "module",
+"description": "OK, let's talk containers.",
+"name": "Containers"
+},
+{
+"children": [
+{
+"type": "information",
+"prompt": "Today you should spend some time learning about the databases we use and are responsible for. Ask your Buddy to help you find some information about our databases.",
+"name": "Learning our Databases"
+},
+{
+"type": "information",
+"prompt": "Database documentation might be institutional knowledge. Ask around and see if someone can help you figure out what you need to know.",
+"name": "Finding Database Documentation"
+},
+{
+"type": "information",
+"prompt": "Today, you should explore the templates and stylesheets for your work. Reach out to your Buddy and ask where they are!",
+"name": "Stylesheets and Style Guides"
+},
+{
+"name": "Process Documentation",
+"prompt": "Phew! That's a lot of documentation. I hope you set aside some time for reading today. Bookmark the links you think you'll use the most. I'll check in with you later to see how much progress you've made.",
+"type": "task",
+"task": "Get familiar with process docs",
+"check_prompt": "Did you have a chance today to familiarize yourself with all the process docs you will need?"
+}
+],
+"type": "module",
+"description": "We're going to spend some time in the docs next.",
+"name": "Process 2"
+},
+{
+"children": [
+{
+"type": "information",
+"prompt": "Automation tools can speed up your work. Ask your Buddy if there are tools that will help you save time in your work.",
+"name": "Automated Tooling"
+},
+{
+"type": "information",
+"prompt": "Get your head in the clouds. Our cloud management practices, that is! Poke around the documentation store for some cloud management resources, or ask someone if you can't find anything.",
+"name": "Cloud Management"
+}
+],
+"type": "module",
+"description": "Let's dig into the codebase even more today!",
+"name": "Codebase"
+},
+{
+"children": [
+{
+"type": "information",
+"prompt": "Make some notes about areas you still have questions about - they might be about the code bases you're working in, process, how your team works and communicates, or something else. Use these in your next 1:1 with your manager.",
+"name": "Additional Questions"
+},
+{
+"type": "information",
+"prompt": "Ask your Buddy if they have any feedback for you based on how the two of you have worked together over the last few weeks. See if there are areas you can grow in!",
+"name": "Getting Feedback"
+},
+{
+"type": "information",
+"prompt": "In your next 1:1 with your manager, ask them about the next projects your team will be working on and how you can take ownership for one of them.",
+"name": "Next Steps"
+},
+{
+"type": "information",
+"prompt": "So, it's not that I'm saying goodbye... in fact, did you know you can always use the \"Ask Eddy\" feature to talk with me? I can help you find information, documentation, and even subject matter experts in your team. Just come back into this conversation and type a question. I'll try to find the most relevant information for you and even check with you to be sure it's what you're looking for.",
+"name": "Not Saying Goodbye"
+}
+],
+"type": "module",
+"description": "Congrats on getting through the first few weeks of your onboarding!",
+"name": "Graduating"
+}
+],
+"type": "template",
+"name": "30 Day Engineering Template",
+"description": "Engineering template created by Kristen Buchanan"
+}
