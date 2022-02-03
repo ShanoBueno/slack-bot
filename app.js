@@ -1,8 +1,11 @@
+
+const fs = require("fs");
+let raw = fs.readFileSync("nextcommand.json");
+let questions = JSON.parse(raw);
 const { App } = require("@slack/bolt");
-const { modules } = require("./nextcommand.json")
+const { modules } = require("./nextcommand.json");
 
 require("dotenv").config();
-// Initializes your app with your bot token and signing secret
 const app = new App({
   token: process.env.SLACK_BOT_TOKEN,
   signingSecret: process.env.SLACK_SIGNING_SECRET,
@@ -10,49 +13,36 @@ const app = new App({
   appToken: process.env.APP_TOKEN,
 });
 
-
-var nextCount = 0; 
-var promptCount = 0
+var modNum = 0 
 
 
 app.command("/next", async ({ command, ack, say }) => {
-  if (promptCount == 0 ){
   try {
     await ack();
-    say(modules[nextCount].name +' - ' + modules[nextCount].description)
-  
-    promptCount += 1; 
+    let message = { blocks: [] };
+    questions.modules[modNum].children.map((questions) => {
+      message.blocks.push(
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: questions.prompt,
+          },
+          
+        },
+        
+
+       
+      );
+    });
+    say(questions.modules[modNum].description);
+    say(message);
+    modNum += 1; 
     
-    if (nextCount == 16) {
-      nextCount = 0;
-    }
-  } catch (error) {
-    console.log("err");
-    console.error(error);
-
-  }
-  ;
-}
-
-
-else {
-  try {
-    await ack();
-    say(modules[nextCount].children[promptCount-1].prompt);
-    promptCount += 1;
-    
-    if (promptCount > modules[nextCount].children.length) {
-      promptCount = 0;
-      nextCount += 1; 
-    }
   } catch (error) {
     console.log("err");
     console.error(error);
   }
-
-
-
-}
 });
 
 (async () => {
@@ -61,3 +51,12 @@ else {
   await app.start(process.env.PORT || port);
   console.log(`⚡️ Slack Bolt app is running on port ${port}!`);
 })();
+
+app.message("hey", async ({ command, say }) => {
+  try {
+    say("Yaaay! that command works!");
+  } catch (error) {
+    console.log("err");
+    console.error(error);
+  }
+});
